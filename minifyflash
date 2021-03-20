@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+MINIFY=/Users/gaugendre/.pyenv/versions/3.8.5/envs/microbit/bin/pyminifier
+FLASH=/Users/gaugendre/.pyenv/versions/3.8.5/envs/microbit/bin/uflash
+
+MINIFIED_FILE=minified.py
+
+$MINIFY -o $MINIFIED_FILE $1
+$FLASH $MINIFIED_FILE
+rm $MINIFIED_FILE

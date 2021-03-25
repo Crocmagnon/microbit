@@ -10,6 +10,7 @@ class Main:
     def __init__(self):
         self._debounce = {BUTTON_A: False, BUTTON_B: False}
         self._buttons = {BUTTON_A: button_a, BUTTON_B: button_b}
+        music.set_tempo(ticks=4, bpm=145)
 
     def main(self):
         while True:
